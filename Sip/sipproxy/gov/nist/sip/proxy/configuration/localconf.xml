@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<CONFIGURATION> 
+	<SIP_STACK 
+stack_name="nist-proxy"
+stack_IP_address="129.6.50.176"
+router_path="gov.nist.sip.proxy.router.ProxyRouter"
+max_connections="20"
+max_server_transactions="20"
+thread_pool_size="20"
+    >       
+
+<LISTENING_POINT port="4000" transport="udp" />
+<LISTENING_POINT port="4000" transport="tcp" />
+<DOMAIN domain="there.com" />
+<DOMAIN domain="pingtel.com" />
+<DOMAIN domain="ubi.com" />
+<DOMAIN domain="hotmail.com" />
+<DOMAIN domain="nist.gov" />
+</SIP_STACK>
+
+<REGISTRAR
+export_registrations="false"
+port="1099"
+/>
+
+<LOGGING
+access_log_via_rmi="false"
+enable_debug="false"
+server_log="./debug/server_log.txt"
+bad_message_log="./debug/bad_message_log.txt"
+output_proxy="./debug/proxy_output.txt"
+debug_log="./debug/debug_log.txt"
+/>
+
+<PRESENCE_SERVER 
+enable="false"
+/>
+
+<AUTHENTICATION
+enable="false"
+method="digest"
+class_file="gov.nist.sip.proxy.authentication.DigestServerAuthenticationMethod"
+passwords_file="./configuration/passwords.xml"
+/>
+
+<REGISTRATIONS 
+enable="false"
+expires_time="3600"
+registrations_file="./configuration/registrations.xml"
+/>
+
+</CONFIGURATION> 
+

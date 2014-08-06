@@ -1,0 +1,19 @@
+
+You can parameterize the proxy via the configuration menu. 
+You have to take a look the docs/gov/nist/sip/proxy/README.html for a
+detailed explanation of the parameters.
+
+-------------------------------------------------------------------------------
+IMPORTANT:
+    - You have to restart (stop/start button) the proxy once you applied the changes
+for the parameters.
+
+
+Credits
+
+The proxy was written initially by Olivier Deruelle (guest researcher at NIST).
+Hacks and bug fixes were sporadically made by M. Ranganathan.
+The SIMPLE compliant presence server was contributed by Henrik Leon.
+
+If you experience any problems please contact nist-sip-dev@nist.gov
+

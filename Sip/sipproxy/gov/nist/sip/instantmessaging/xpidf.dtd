@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+
+   <!ELEMENT presence (presentity, atom*)>
+
+   <!ELEMENT presentity (#PCDATA)>
+   <!ATTLIST presentity uri CDATA #REQUIRED>
+
+   <!ELEMENT atom (postal?, address*)>
+   <!ATTLIST atom atomid  CDATA #REQUIRED
+                  expires CDATA #IMPLIED>
+
+   <!ELEMENT postal (#PCDATA)>
+
+   <!ELEMENT address (status | class | duplex | feature | note)*>
+   <!ATTLIST address uri      CDATA  #REQUIRED
+                     priority CDATA  #IMPLIED>
+
+   <!ELEMENT status EMPTY>
+   <!ATTLIST status status (open|closed|inuse) #REQUIRED>
+
+   <!ELEMENT class EMPTY>
+   <!ATTLIST class class   (business|personal) #REQUIRED>
+
+   <!ELEMENT duplex EMPTY>
+   <!ATTLIST duplex duplex (full|half|send-only|receive-only) #REQUIRED>
+
+   <!ELEMENT feature EMPTY>
+   <!ATTLIST feature feature (voicemail|attendant) #REQUIRED>
+
+   <!ELEMENT mobility EMPTY>
+   <!ATTLIST mobility mobility (fixed|mobile) #REQUIRED>
+
+   <!ELEMENT note (#PCDATA)>

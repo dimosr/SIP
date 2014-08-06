@@ -1,0 +1,37 @@
+
+NIST-SIP v1.1 instant messaging (IM) tool
+========================================
+
+This is an example of how to use the JAIN-SIP 1.1 API to build  a client 
+software.
+
+
+IMPORTANT:
+
+    - UDP and TCP support.
+
+    - The IM user agent processes MESSAGE, INFO, OK, BYE, SUBSCRIBE, NOTIFY and REGISTER
+      sip messages. There is support for ACK  but not yet implemented!
+        
+    - Client Authentication support (DIGEST). 
+ 
+    - Buddies uploading, you can define your buddies in an XML file, they will be uploaded
+      by the application, take a look at "buddies.xml" for more details! 
+
+    - This application was successfully tested with Microsoft Messenger, Siemens user agent,
+      Cisqo User Agent and our SIP proxy, registrar, presence server!
+
+    - The XML supported formats for NOTIFY's body are "xpidf+xml"
+      and "cpim-pidf+xml"!
+    
+
+Refer to docs/gov/nist/sip/instantmessaging/README.html for more informations on
+how to use the client.
+
+------------------------------------------------------------------------------
+Author 
+
+mailto:"Olivier Deruelle" <deruelle@antd.nist.gov>
+------------------------------------------------------------------------------
+If you experience any problems please contact:
+mailto:nist-sip-dev@antd.nist.gov

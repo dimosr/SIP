@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='us-ascii'?> 
+
+<!--
+  <REGISTRATION  displayName="olivier" uri="sip:oli@there.com"
+    ...
+  </REGISTRATION>
+  The display name and the uri attributes are what would be expected in the 
+  To header of the REGISTER. Important: no parameters are accepted in this uri!!
+  The uri attribute will constitute the key for the registrar to retrieve the
+  registration.
+  Parameters are accepted for the contact uri.   
+  
+    <CONTACT  uri="mailto:oli@129.6.50.116:8000"    />
+        <CONTACT  displayName="olivier work" uri="sip:oli@129.6.55.72:8000" expires="10" />
+        <CONTACT  uri="sipc:oli@129.6.55.116:8000;transport=UDP;user=olivier" expires="56" />
+    
+       <CONTACT  uri="sip:129.6.50.23" />
+        <CONTACT  uri="sip:129.6.50.23" />
+          <CONTACT  uri="sip:amelie@129.6.50.23" />
+    
+-->
+<REGISTRATIONS> 
+    <REGISTRATION  displayName="Ranga " uri="sip:mranga@nist.gov" >
+	<BUDDY     uri = "sip:deruelle@nist.gov" />
+    </REGISTRATION>
+
+    <REGISTRATION  displayName="Deruelle " uri="sip:deruelle@nist.gov" >
+	<BUDDY     uri = "sip:mranga@nist.gov" />
+    </REGISTRATION>
+</REGISTRATIONS> 

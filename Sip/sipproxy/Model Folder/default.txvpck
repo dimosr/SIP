@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.0">
+	<view uin="V574ng9ec9gjm2w-5e7d82">
+		<property name="$parentUin" value="jdt:e_jar_package:bin:javax.sip.message"/>
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="Package Diagram"/>
+	</view>
+</nodeSet>

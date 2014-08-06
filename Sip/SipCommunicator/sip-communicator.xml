@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+<log4j>
+    <rootLogger value="net.java.sip.communicator.common.Console.TraceLevel, RFLogger"/>
+    <appender>
+        <RFLogger value="org.apache.log4j.RollingFileAppender">
+            <layout value="org.apache.log4j.PatternLayout">
+                <ConversionPattern value="%r [%t] %p %c{2} %x - %m%n"/>
+            </layout>
+            <MaxBackupIndex value="1"/>
+            <File value="log/sip-communicator.app.log"/>
+            <MaxFileSize value="256KB"/>
+        </RFLogger>
+    </appender>
+</log4j>
+<net>
+  <java>
+    <sip>
+      <communicator>
+          <FIRST_LAUNCH value="false"/>
+          <ENABLE_SIMPLE value="false"/>
+          <media>
+<!---         <PREFERRED_AUDIO_ENCODING system="false" value=""/> -->
+              <PREFERRED_AUDIO_ENCODING value="0"/>
+              <PREFERRED_VIDEO_ENCODING value="26"/>
+            <MEDIA_SOURCE value=""/>
+            <MEDIA_BUFFER_LENGTH value="100"/>
+            <IP_ADDRESS value=""/>
+            <AUDIO_PORT value="22224"/>
+            <VIDEO_PORT value="22222"/>
+        </media>
+        <sip>
+            <PUBLIC_ADDRESS value="sip:talguind"/>
+            <TRANSPORT value=""/>
+            <REGISTRAR_ADDRESS value="192.168.1.8:4000"/>
+            <USER_NAME value=""/>
+            <STACK_PATH value="gov.nist"/>
+            <PREFERRED_LOCAL_PORT value="5060"/>
+            <DISPLAY_NAME value="Tiuley Alguindigue"/>
+            <REGISTRAR_TRANSPORT value="UDP"/>
+            <REGISTRATIONS_EXPIRATION value="3600"/>
+            <REGISTRAR_PORT value="5060"/>
+
+            <DEFAULT_DOMAIN_NAME value="192.168.1.8:4000"/>
+            <DEFAULT_AUTHENTICATION_REALM value="192.168.1.8:4000"/>
+            <WAIT_UNREGISTGRATION_FOR value="1100"/>
+            <SAME_USER_EVERYWHERE value="true"/>
+            <simple>
+                <CONTACT_LIST_FILE value="contact-list.xml"/>
+                <SUBSCRIPTION_EXP_TIME value="600"/>
+                <MIN_EXP_TIME value="120"/>
+                <LAST_SELECTED_OPEN_STATUS value="online"/>
+            </simple>
+        </sip>
+
+<!--
+    net.java.sip.communicator.sipphone.IS_RUNNING_SIPPHONE=false
+    net.java.sip.communicator.sipphone.MY_SIPPHONE_URL=http://my.sipphone.com
+-->
+        <sipphone>
+            <IS_RUNNING_SIPPHONE value="false"/>
+            <MY_SIPPHONE_URL value="http://my.sipphone.com"/>
+        </sipphone>
+<!--
+net.java.sip.communicator.gui.AUTH_WIN_TITLE=SIP Authentication!
+net.java.sip.communicator.gui.AUTHENTICATION_PROMPT=Please enter login name and password for the specified realm:
+net.java.sip.communicator.gui.USER_NAME_LABEL=SIPphone Number:
+net.java.sip.communicator.sipphone.USER_NAME_EXAMPLE=Example: 1-747-555-1212
+net.java.sip.communicator.gui.PASSWORD_LABEL=Password:
+-->
+        <gui>
+            <AUTH_WIN_TITLE value="SIP Authentication!"/>
+            <AUTHENTICATION_PROMPT value="Please enter login name and password for the specified realm:"/>
+            <USER_NAME_LABEL value="User Name:"/>
+            <USER_NAME_EXAMPLE value="Example: 1-747-555-1212"/>
+            <PASSWORD_LABEL value="Password:"/>
+            <GUI_MODE value="PhoneUiMode"/>
+            <!--GUI_MODE value="ImUiMode"/-->
+            <imp>
+                <CONTACT_LIST_X value=""/>
+                <CONTACT_LIST_Y value=""/>
+                <CONTACT_LIST_WIDTH value=""/>
+                <CONTACT_LIST_HEIGHT value=""/>
+            </imp>
+        </gui>
+        <common>
+            <PREFERRED_NETWORK_INTERFACE value="TAP-Win32 Adapter V9"/>
+            <PREFERRED_NETWORK_ADDRESS value="192.168.1.7"/>
+        </common>
+
+
+<!--
+    net.java.sip.communicator.STUN_SERVER_ADDRESS=stun01.sipphone.com
+    net.java.sip.communicator.STUN_SERVER_PORT=3478
+    net.java.sip.communicator.VOICE_MAIL_ADDRESS=17475551212
+-->
+<!--        <STUN_SERVER_ADDRESS value="stun01.sipphone.com"/>
+        <STUN_SERVER_PORT value="3478"/>
+        <VOICE_MAIL_ADDRESS value="17475551212"/>
+-->
+</communicator>
+    </sip>
+  </java>
+</net>
+    <gov>
+    <nist>
+        <javax>
+            <sip>
+                <SERVER_LOG value="log/sip-communicator.stack.log"/>
+                <TRACE_LEVEL value="16"/>
+            </sip>
+        </javax>
+    </nist>
+</gov>
+<javax>
+    <sip>
+        <IP_ADDRESS value="192.168.1.6"/>
+        <STACK_NAME value="sip-communicator"/>
+        <ROUTER_PATH value="net.java.sip.communicator.sip.SipCommRouter"/>
+        <OUTBOUND_PROXY value="192.168.1.8:4000/udp"/>
+        <RETRANSMISSON_FILTER value=""/>
+        <EXTENSION_METHODS value=""/>
+        <RETRANSMISSION_FILTER value="true"/>
+    </sip>
+</javax>
+<java>
+    <net>
+        <preferIPv4Stack system="true" value="true"/>
+        <preferIPv6Addresses system="true" value="false"/>
+    </net>
+</java>
+</configuration>

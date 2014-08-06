@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='us-ascii'?> 
+<AUTHENTICATION>
+
+<User name="deruelle" 
+      realm="nist.gov"
+      password="nist" 
+/>
+
+</AUTHENTICATION> 
+

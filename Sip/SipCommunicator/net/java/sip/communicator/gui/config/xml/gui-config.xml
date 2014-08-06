@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration tittle="Configuration Tittle">
+<!--
+	IMPORTNAT when writing description escape the characters '<' with &#60
+-->
+    <config name="custom properties">
+        <media>
+            <property name="net.java.sip.communicator.media.IP_ADDRESS">
+				<!--
+					<allowedvalues type="combo">
+						 An IP chooser using NetworkInterface should go here
+					</allowedvalues>
+				-->
+                <labelname>Host IP Address</labelname>
+                <description><![CDATA[
+					The address that Sip Communicator should advertise for media sessions.
+					(If unsure leave that blank)
+					]]>
+				</description>
+            </property>
+            <property name="net.java.sip.communicator.media.AUDIO_PORT">
+                <labelname>Audio Receiver Port</labelname>
+                <description><![CDATA[
+					Specifies the port that SipCommunicator should use to receive audio. Default is 22224
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.media.VIDEO_PORT">
+                <labelname>Video Receiver Port</labelname>
+                <description><![CDATA[
+					Specifies the port that SipCommunicator should use to receive video. Default is 22222
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.media.MEDIA_SOURCE">
+                <labelname>Media Source</labelname>
+                <description><![CDATA[This property is very useful if you do not have a camera
+						or no capture devices at all but would like to transmit audio and/or video.
+						You can enter the URL of a media file (e.g. file://home/user/sipcommunicator/lostinspace.mov) and it will be used to send audio and/or video streams to the remote party.
+						Default is null (this means use capture devices).
+						]]></description>
+            </property>
+            <property name="net.java.sip.communicator.media.PREFERRED_AUDIO_ENCODING">
+                <labelname>Preferred audio encoding</labelname>
+                <description><![CDATA[
+					The sdp code of the audio encoding format that Sip Communicator should use in media advertisements.
+					(example values are 0 - PCMU, 3 - GSM, 8 - PCMA, 9 - G722, see rfc1890 page 15 for further details).
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.media.PREFERRED_VIDEO_ENCODING">
+                <labelname>Preferred video encoding</labelname>
+                <description><![CDATA[
+					The sdp code of the video encoding format that Sip Communicator should use in media advertisements.
+					(example values are 26 - JPEG, 34 - H.261, see rfc1890 page 15 for further details).
+					]]></description>
+
+            </property>
+        </media>
+        <sip>
+            <property name="net.java.sip.communicator.sip.STACK_PATH">
+                <labelname>JAIN-SIP implementation</labelname>
+                <description><![CDATA[
+					The fully qualified path to the package that contains the JAIN-SIP implementation.
+					If you want to use the phone with another stack, that is where you should plug it.
+					Default is gov.nist
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.PUBLIC_ADDRESS">
+                <labelname>Public SIP address</labelname>
+                <description><![CDATA[
+					Your SIP address. ( example: sip:alice@atlanta.com )
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.DISPLAY_NAME">
+                <labelname>Name</labelname>
+                <description><![CDATA[
+					Your name (example: Alice Doe).
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.TRANSPORT">
+                <labelname>Transport protocol</labelname>
+                <description><![CDATA[
+					The protocol that Sip Communicator should use to transfer SIP messages
+                              (tcp or udp, default is udp).
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.PREFERRED_LOCAL_PORT">
+                <labelname>Preferred SIP port number</labelname>
+                <description><![CDATA[
+						The port where Sip Communicator should listen for incoming SIP messages. If it fails
+                                    to bind to that port Sip Communicator will randomly bind to another one.
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.REGISTRAR_ADDRESS">
+                <labelname>Registrar address</labelname>
+                <description><![CDATA[
+						The address of your registrar server (if any).
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.REGISTRAR_PORT">
+                <labelname>Registrar port</labelname>
+                <description><![CDATA[
+						The port where the registrar server is listening.
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.REGISTRAR_TRANSPORT">
+                <labelname>Registrar transport protocol</labelname>
+                <description><![CDATA[
+					The transport protocol that should be used when contacting the registrar server.
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.REGISTRATIONS_EXPIRATION">
+                <labelname>Registrations expire after</labelname>
+                <description><![CDATA[
+					The time that registrations with the registrar server will remain valid. Sip Communicator
+					automatically renews registration after the time has expired (default is 3600).
+					]]></description>
+            </property>
+
+
+
+            <property name="net.java.sip.communicator.sip.DEFAULT_DOMAIN_NAME">
+                <labelname>DEFAULT_DOMAIN_NAME</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.DEFAULT_AUTHENTICATION_REALM ">
+                <labelname>DEFAULT_AUTHENTICATION_REALM </labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.WAIT_UNREGISTGRATION_FOR">
+                <labelname>WAIT_UNREGISTGRATION_FOR</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sip.SAME_USER_EVERYWHERE">
+                <labelname>SAME_USER_EVERYWHERE</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            
+            <property name="net.java.sip.communicator.sipphone.IS_RUNNING_SIPPHONE">
+                <labelname>IS_RUNNING_SIPPHONE</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sipphone.MY_SIPPHONE_URL">
+                <labelname>MY_SIPPHONE_URL</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+                        
+            <property name="net.java.sip.communicator.gui.AUTH_WIN_TITLE">
+                <labelname>AUTH_WIN_TITLE</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.gui.AUTHENTICATION_PROMPT">
+                <labelname>AUTHENTICATION_PROMPT</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.gui.USER_NAME_LABEL">
+                <labelname>USER_NAME_LABEL</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.sipphone.USER_NAME_EXAMPLE">
+                <labelname>USER_NAME_EXAMPLE</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.gui.PASSWORD_LABEL">
+                <labelname>PASSWORD_LABEL</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            
+            <property name="net.java.sip.communicator.STUN_SERVER_ADDRESS">
+                <labelname>STUN_SERVER_ADDRESS</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.STUN_SERVER_PORT">
+                <labelname>STUN_SERVER_PORT</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>
+            <property name="net.java.sip.communicator.VOICE_MAIL_ADDRESS">
+                <labelname>VOICE_MAIL_ADDRESS</labelname>
+                <description><![CDATA[
+					Describe it!
+					]]></description>
+            </property>            	                        
+        </sip>
+    </config>
+    <config name="stack properties">
+        <jain>
+            <property name="javax.sip.IP_ADDRESS">
+                <labelname>SipStack IP Address</labelname>
+                <description><![CDATA[
+					Sets the IP Address of the SipStack to the property value i.e 11.1.111.111.
+					Default is InetAddress.getLocalHost().getHostAddress().
+					]]></description>
+            </property>
+            <property name="javax.sip.STACK_NAME">
+                <labelname>Stack name</labelname>
+                <description><![CDATA[
+						A name that should be given to the stack thread (used for debugging).
+					]]></description>
+            </property>
+            <property name="javax.sip.ROUTER_PATH">
+                <labelname>Router class</labelname>
+                <description><![CDATA[
+						The class that will route outgoing sip messages
+                                    (default is net.java.sip.communicator.sip.SipCommRouter)
+					]]></description>
+            </property>
+            <property name="javax.sip.RETRANSMISSON_FILTER">
+                <labelname>Retransmission filter</labelname>
+                <description><![CDATA[
+					  Specifies whether the stack should filter retransmitted messages or pass them to
+ 					  the application. Leave that blank unless you are sure what you are doing.
+					]]></description>
+            </property>
+            <property name="javax.sip.OUTBOUND_PROXY">
+                <labelname>SIP proxy</labelname>
+                <description><![CDATA[
+					Fill this in if you are using a SIP proxy server.
+					IMPORTANT! Format is <font color="blue">&#60address>:&#60port>/&#60transport></font>.
+					Where <font color="blue">&#60address></font> is the IP address or FQDN of the proxy server.
+					<font color="blue">&#60port></font> is its port and <font color="blue">&#60transport></font> is the protocol that it uses,
+					tcp or udp.
+					]]></description>
+            </property>
+            <property name="javax.sip.EXTENSION_METHODS">
+                <labelname>Extension methods</labelname>
+                <description><![CDATA[
+						Non standard methods that should be considere as a Start of a dialog.
+					]]></description>
+            </property>
+        </jain>
+        <nist>
+            <property name="gov.nist.javax.sip.TRACE_LEVEL">
+                <labelname>Trace level</labelname>
+                <description><![CDATA[
+					Trace level indicates the stack the level of logging. 32 logs everything and 1 for weakest
+					logging.
+					]]></description>
+            </property>
+            <property name="gov.nist.javax.sip.SERVER_LOG">
+                <labelname>Server log</labelname>
+                <description><![CDATA[
+					The name of the file where the stack should store its log messages.
+					]]></description>
+            </property>
+		</nist>
+    </config>
+    <config name="thirdparty properties">
+        <log4J>
+            <property name="log4j.rootLogger">
+                <labelname>Root Logger</labelname>
+                <description><![CDATA[
+						Needed by Log4J
+					]]></description>
+            </property>
+            <property name="log4j.appender.RFLogger">
+                <labelname>RFLogger</labelname>
+                <description><![CDATA[
+						Needed by Log4J
+					]]></description>
+            </property>
+            <property name="log4j.appender.RFLogger.File">
+                <labelname>File</labelname>
+                <description><![CDATA[
+						Log file name.
+					]]></description>
+            </property>
+            <property name="log4j.appender.RFLogger.MaxFileSize">
+                <labelname>Max log file size</labelname>
+                <description><![CDATA[
+					 The maximum allowable size of the log file.
+					]]></description>
+            </property>
+            <property name="log4j.appender.RFLogger.MaxBackupIndex">
+                <labelname>Max Backup Index</labelname>
+                <description><![CDATA[
+					Number of log files to keep in backup.
+					]]></description>
+            </property>
+            <property name="log4j.appender.RFLogger.layout">
+                <labelname>Log layout</labelname>
+                <description><![CDATA[
+					The layout to used when logging messages.
+					]]></description>
+            </property>
+            <property name="log4j.appender.RFLogger.layout.ConversionPattern">
+                <labelname>ConversionPattern</labelname>
+                <description><![CDATA[
+					Conversion pattern. Needed by Log4J
+					]]></description>
+            </property>
+        </log4J>
+    </config>
+</configuration>
